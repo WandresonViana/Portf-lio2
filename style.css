@@ -1,0 +1,153 @@
+```css
+/* =========================
+   MOBILE FIRST
+========================= */
+
+/* Cabeçalho com Flexbox */
+header {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Seções */
+section {
+    padding: 20px;
+}
+
+/* Sobre Mim */
+#sobre {
+    text-align: center;
+}
+
+#sobre img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Projetos com Flexbox */
+#projetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#projetos h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+article {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    flex: 1 1 280px;
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article h3 {
+    margin-bottom: 10px;
+}
+
+article p {
+    margin-bottom: 15px;
+}
+
+/* Formulário */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Botão */
+button {
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-escura);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* =========================
+   TABLETS
+========================= */
+@media (min-width: 768px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section {
+        max-width: 1000px;
+        margin: 40px auto;
+    }
+}
+
+/* =========================
+   DESKTOPS
+========================= */
+@media (min-width: 1024px) {
+
+    #projetos {
+        justify-content: space-between;
+    }
+
+    article:hover {
+        transform: translateY(-5px);
+        transition: 0.3s;
+    }
+}
+```
